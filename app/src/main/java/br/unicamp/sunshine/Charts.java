@@ -9,6 +9,7 @@ import android.webkit.JavascriptInterface;
 import android.webkit.WebView;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.TextView;
 
@@ -25,6 +26,7 @@ public class Charts extends AppCompatActivity {
     RadioButton semanal;
     RadioButton mensal;
     RadioButton anual;
+    ImageView imgLux;
     WebView webView;
     double latitude, longitude;
     String ret[][];
@@ -49,7 +51,10 @@ public class Charts extends AppCompatActivity {
         semanal = (RadioButton) findViewById(R.id.rdbSemana);
         mensal = (RadioButton) findViewById(R.id.rdbMensal);
         anual = (RadioButton) findViewById(R.id.rdbAnual);
+        imgLux = (ImageView) findViewById(R.id.imgLux);
         webView = (WebView) findViewById(R.id.webGrafico);
+
+        imgLux.setImageResource(R.drawable.lux);
 
         btnHit.setOnClickListener(new View.OnClickListener() {
             @Override
